@@ -4,9 +4,11 @@ import dash_html_components as html
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
 import pandas as pd
+import flask
 
 
-server = app.server
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server)
 
 
 baseURL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
