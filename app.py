@@ -4,11 +4,7 @@ import dash_html_components as html
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
 import pandas as pd
-import flask
-
-
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-server = app.server
+# import flask
 
 
 baseURL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
@@ -33,6 +29,7 @@ countries = allData['Country/Region'].unique()
 countries.sort()
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 app.layout = html.Div(
     style={ 'font-family':"Courier New, monospace" },
