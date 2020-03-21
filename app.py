@@ -7,8 +7,10 @@ import pandas as pd
 import flask
 
 
-server = flask.Flask(__name__)
-app = dash.Dash(__name__, server=server)
+# server = flask.Flask(__name__)
+# app = dash.Dash(__name__, server=server)
+
+server = app.server
 
 
 baseURL = "data/"
