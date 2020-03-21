@@ -1,0 +1,11 @@
+# Data Download Link - https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series
+# Heroku Installation - https://dash.plot.ly/deployment
+# Inspiration  - https://github.com/ploner/coronavirus-py
+# Article - https://towardsdatascience.com/visualise-covid-19-case-data-using-python-dash-and-plotly-e58feb34f70f
+
+# Installations
+pip install pipenv
+pip install dash
+pip install plotly
+pip install pandas
+pip install gunicorn
