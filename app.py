@@ -7,18 +7,13 @@ import pandas as pd
 import flask
 
 
-# server = flask.Flask(__name__)
-# app = dash.Dash(__name__, server=server)
-
-
-baseURL = "data/"
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
+
+baseURL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
+
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 tickFont = {'size':12, 'color':"rgb(30,30,30)", 'family':"Courier New, monospace"}
 
@@ -49,7 +44,7 @@ app.layout = html.Div(
             dcc.Dropdown(
                 id='country',
                 options=[{'label':c, 'value':c} for c in countries],
-                value='China'
+                value='Italy'
             )
         ]),
         html.Div(className="four columns", children=[
