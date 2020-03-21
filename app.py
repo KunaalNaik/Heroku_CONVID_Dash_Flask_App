@@ -10,12 +10,15 @@ import flask
 # server = flask.Flask(__name__)
 # app = dash.Dash(__name__, server=server)
 
-server = app.server
-
 
 baseURL = "data/"
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+
 
 tickFont = {'size':12, 'color':"rgb(30,30,30)", 'family':"Courier New, monospace"}
 
